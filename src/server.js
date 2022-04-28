@@ -4,11 +4,13 @@ import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import watchRouter from "./routers/watchRouter";
 const app = express();
-const PORT = 4000;
+const PORT = 5000;
 
 const handleListening = () =>
   console.log(`Server listenting on port http://localhost:${PORT} 🚀`);
 
+app.set("view engine","pug");
+app.set("views", process.cwd()+"/src/views");
 app.use(logger("dev"));
 app.use("/",globalRouter);
 app.use("/user",userRouter);

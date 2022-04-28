@@ -1,3 +1,3 @@
 export const homepage = (req,res) => {
-    res.send("Start")
+    res.render("home");
 }

@@ -1,3 +1,3 @@
 export const editProfile = (req,res) => {
-    res.send("editProfile")
+    res.render("edit");
 }
