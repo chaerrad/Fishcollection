@@ -1,3 +1,3 @@
 export const editProfile = (req,res) => {
-    res.render("edit");
+    res.render("edit", { pageTitle: "User-edit" });
 }

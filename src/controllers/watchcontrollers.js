@@ -1,3 +1,3 @@
 export const watch = (req,res) => {
-    res.send(`${req.params.id}`)
+    res.render("watch", { pageTitle: "watch" });
 }
