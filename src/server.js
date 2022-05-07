@@ -1,5 +1,7 @@
 import express from "express";
 import logger from "morgan";
+import "./db";
+import "./models/login.js";
 import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import watchRouter from "./routers/watchRouter";
