@@ -12,8 +12,27 @@ export const joinpage = (req,res) => {
 }
 export const postlogin = async (req,res) => {
     const {ID, password} = req.body;
+    const user = await Login.findOne( {ID : ID} );
+    if(!user)
+    {
+        console.log("please create ID");
+        return res.render("Join");
+    }
+    else {
+        if(user.password === password)
+        {
+            console.log("password correct");
+            
+            console.log("password correct");
+            return res.redirect("/");
+        }
+        else
+        {
+            console.log("password wrong");
+            return res.redirect("login");
+        }
+    }
     
-    res.render("login", { pageTitle: "login"});
 }
 export const postjoin = async (req,res) => {
     const {ID, password} = req.body;
